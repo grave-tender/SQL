@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="377F0D89-54CD-EEF7-C24C-2854A3F7D150" name="Etudian">
+<createdBy>carlo</createdBy>
+<createdTime>2022-03-30 13:15:25 UTC</createdTime>
+<ownerDesignName>30 mars</ownerDesignName>
+<engineerTo>
+<item key="CE8C32B2-9AD5-7B14-A2B2-A26E56B23E51" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="etudiant_id" id="27E88243-9C0E-53B9-C02C-C4F22D60D0B1">
+<createdBy>carlo</createdBy>
+<createdTime>2022-03-30 13:15:33 UTC</createdTime>
+<ownerDesignName>30 mars</ownerDesignName>
+<engineerTo>
+<item key="CE8C32B2-9AD5-7B14-A2B2-A26E56B23E51" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom" id="5381673E-3A1D-44ED-0BD0-773C49D4AF33">
+<createdBy>carlo</createdBy>
+<createdTime>2022-03-30 13:15:50 UTC</createdTime>
+<ownerDesignName>30 mars</ownerDesignName>
+<engineerTo>
+<item key="CE8C32B2-9AD5-7B14-A2B2-A26E56B23E51" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8DB4F83A-3BF9-F013-3EF4-52A3FEAD45A6" name="Etudian PK">
+<createdBy>carlo</createdBy>
+<createdTime>2022-03-30 13:18:11 UTC</createdTime>
+<ownerDesignName>30 mars</ownerDesignName>
+<engineerTo>
+<item key="CE8C32B2-9AD5-7B14-A2B2-A26E56B23E51" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>27E88243-9C0E-53B9-C02C-C4F22D60D0B1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
