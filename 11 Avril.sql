@@ -130,20 +130,20 @@ CREATE TABLE Patient(
     age number check(age BETWEEN 0 AND 120) not null
 );
 
-INSERT INTO Patient(
-    p_id,
-    nom,
-    prenom,
-    gendre,
-    age
-)
-VALUES (
-    1234,
-    'Carlos',
-    'Leon',
-    'M',
-    23
-);
+-- INSERT INTO Patient(
+--     p_id,
+--     nom,
+--     prenom,
+--     gendre,
+--     age
+-- )
+-- VALUES (
+--     1234,
+--     'Carlos',
+--     'Leon',
+--     'M',
+--     23
+-- );
 
 /*
 3. traitement
@@ -167,3 +167,38 @@ CREATE TABLE Traitement(
 DROP TABLE Hopital;
 DROP TABLE Patient;
 DROP TABLE Traitement;
+
+
+ALTER TABLE Patient
+ADD date_creation date default SYSDATE;
+
+SELECT * FROM Patient;
+
+ALTER TABLE Traitement
+ADD type_traitement VARCHAR2(20);
+
+SELECT * FROM Traitement; --NEEDS CONTENT TO BE ABLE TO DISPLAY SUMTHING
+
+ALTER TABLE Patient
+MODIFY prenom VARCHAR2(40);
+
+SELECT * FROM Patient; --NEEDS CONTENT TO BE ABLE TO DISPLAY SUMTHING
+
+ALTER TABLE Patient
+DROP COLUMN date_creation;
+
+UPDATE employees
+SET department_id = 50
+WHERE employee_id = 113;
+
+UPDATE employees
+SET job_id = (
+	SELECT job_id
+	FROM employees
+	WHERE employee_id = 205),
+salary = (
+	SELECT salary
+	FROM employees
+	WHERE employee_id = 205)
+WHERE employee_id = 113;
+
